@@ -14,7 +14,23 @@
       illum.
     </p>
     <script>
-      // Q Write a generic function to get elements by given attribute. Using that function select the above p tag and console.log(); it
+      // Q Write a generic function to get elements by given attribute. 
+      // Using that function select the above p tag and console.log(); it
+
+     function getElementsByAttribute(attribute){
+       let allElems = document.getElementsByTagName('*'),
+       elem,
+       found = [];
+       for(let i = 0; i < allElems.length; i++){
+         elem = allElems[i];
+         if(elem.getAttribute(attribute)){
+           found.push(elem);
+         }
+       }
+       return found;
+     }
+
+     console.log(getElementsByAttribute('data-test'));
 
      
     </script>

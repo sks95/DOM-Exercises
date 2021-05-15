@@ -15,8 +15,22 @@
       <li><a href="#">Fifth item</a></li>
     </ul>
     <script>
-      // Q Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
+      // Q Write a single click event handler that helps to delete any 
+      // list item when clicked on it, attach that handler to above list
+      // let id = document.getElementById('listToDestroy');
+      // let li = id.querySelectorAll('li');
+      // for(let i = 0; i < li.length; i++){
+      //   li[i].addEventListener('click', function(e){
+      //     if(e.currentTarget){
+      //       li[i].remove();
+      //     }
+      //   })
+      // }
 
+      document.querySelector('#listToDestroy').addEventListener('click', function(e){
+        let elem = e.target.parentNode;
+        elem.parentNode.removeChild(elem);
+      });
     
     </script>
   </body>
