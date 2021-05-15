@@ -27,8 +27,26 @@
       </li>
     </ul>
     <script>
+
       // Q- Make remove all button work  and make individual delete btn work 
       
+      let rAll = document.querySelector('#all');
+      let ul = document.querySelector('ul');
+      let Allli = ul.querySelectorAll('li');
+      
+      for(let i = 0; i < Allli.length; i++){
+        Allli[i].addEventListener('click', function(e){
+          e.currentTarget.remove();
+        });
+      }
+
+      rAll.addEventListener('click', function () {
+        Allli = ul.querySelectorAll('li');
+        for(let i = 0; i < Allli.length; i++){
+          ul.removeChild(Allli[i]);
+        }
+      });
+
     </script>
   </body>
 </html>
